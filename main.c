@@ -4,7 +4,6 @@
 
 int main ( int argc, char** argv )
 {
-
   int jouer = 0;
     printf("Voulez-vous jouer?\nOui = 1 \nNon = 2\n");
 
@@ -12,7 +11,8 @@ while (jouer == 0) {
   
   do {
 
-
+  scanf("%d", &jouer);
+  
   if (jouer == 1) {
     printf("Nikel alors\n");
   }
@@ -20,7 +20,11 @@ while (jouer == 0) {
     printf("tes mechant\n");
     jouer = 0;
   }
-  } while (jouer != 1);
+  else {
+    printf("ta dis quoi la?\n");
+    jouer = 0;
+  }
+  } while (jouer == 0 || jouer == 2);
   
   
   int niveau = 0;
